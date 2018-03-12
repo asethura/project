@@ -16,5 +16,4 @@ node ('node'){
 
         throw err
     }
-)
 }
