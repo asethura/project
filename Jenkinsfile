@@ -10,7 +10,8 @@ pipeline{
 		stage ('Build') {
 			steps{
         			//sh "mvn clean install"
-				sh 'echo $PATH'
+				//sh 'echo $PATH'
+				sh 'ls /OPT'  
 			}
 			
         	}
