@@ -1,6 +1,6 @@
 pipeline{
 	agent any
-	
+	def mvnHome = tool 'M3'  
 	stages {
 		stage('checkout'){
 			steps{
@@ -8,7 +8,7 @@ pipeline{
 			}
 		}
 		stage ('Build') {
-			def mvnHome = tool 'M3'  
+			
         	//sh "echo 'shell scripts to build project...'"
 			steps{
 				     
