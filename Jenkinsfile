@@ -8,9 +8,10 @@ pipeline{
 			}
 		}
 		stage ('Build') {
+			def mvnHome = tool 'M3'  
         	//sh "echo 'shell scripts to build project...'"
 			steps{
-				def mvnHome = tool 'M3'       
+				     
 				sh "mvn package"
 			}
 			
