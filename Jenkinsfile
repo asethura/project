@@ -17,14 +17,12 @@ pipeline{
 			}
 			
         	}
+		
 		stage ('Test') {
 			steps{
 				sh "${MAVEN_HOME}/bin/mvn test "
 				}
-			steps{
-				junit **/build/test-reports/*.xml
-				}
-			
+						
         	}
 	}
 }
