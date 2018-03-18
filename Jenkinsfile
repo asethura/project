@@ -23,13 +23,12 @@ pipeline{
 				sh "${MAVEN_HOME}/bin/mvn test surefire-report:report"
 				}
 		}
-		
-		post {
+							
+        }
+	post {
   			always {
     				junit "path/to/xml"
   			}
 		}
-						
-        	
-	}
+			
 }
