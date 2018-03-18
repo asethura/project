@@ -22,6 +22,16 @@ pipeline{
 			steps{
 				sh "${MAVEN_HOME}/bin/mvn test surefire-report:report"
 				}
+			steps{	
+			publishHTML (target: [
+      						allowMissing: false,
+      						alwaysLinkToLastBuild: false,
+      						keepAll: true,
+      						reportDir: 'coverage',
+      						reportFiles: 'index.html',
+      						reportName: "RCov Report"
+    			])
+			}
 						
         	}
 	}
