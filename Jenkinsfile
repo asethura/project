@@ -22,6 +22,7 @@ pipeline{
 			steps{
 				sh "${MAVEN_HOME}/bin/mvn test surefire-report:report"
 				}
+		stage ('Publish') {
 			steps{	
 			publishHTML (target: [
       						allowMissing: false,
@@ -32,6 +33,7 @@ pipeline{
       						reportName: "RCov Report"
     			])
 			}
+		}
 						
         	}
 	}
