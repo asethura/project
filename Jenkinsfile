@@ -20,7 +20,7 @@ pipeline{
 		
 		stage ('Test') {
 			steps{
-				sh "${MAVEN_HOME}/bin/mvn test "
+				sh "${MAVEN_HOME}/bin/mvn test surefire-report:report"
 				}
 						
         	}
