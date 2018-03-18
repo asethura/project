@@ -17,5 +17,11 @@ pipeline{
 			}
 			
         	}
+		stage ('Test') {
+			steps{
+				junit 'build/reports/**/*.xml'
+				}
+			
+        	}
 	}
 }
